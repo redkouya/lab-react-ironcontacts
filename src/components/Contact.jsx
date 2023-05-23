@@ -8,6 +8,8 @@ function Contact(props) {
         <th>Picture</th>
         <th>Name</th>
         <th>Popularity</th>
+        <th>Won an Oscar</th>
+        <th>Won an Emmy</th>
       </tr>
       <tr>
         <td>
@@ -19,6 +21,8 @@ function Contact(props) {
         </td>
         <td width="150px">{props.contact.name}</td>
         <td>{props.contact.popularity.toFixed(2)}</td>
+        <td>{props.contact.wonOscar &&"🏆"}</td>
+        <td>{props.contact.wonEmmy &&"🏆"}</td>
       </tr>
     </table>
   );
