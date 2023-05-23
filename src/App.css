@@ -1,38 +1,70 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.buttons{
+  margin: 10px;
+}
+table{
+  margin: auto;
+}
+thead th{
+  background-color: gray;
+  color: white; 
+}
+table img{
+  border-radius: 5px;
+}
+table,th,td{
+  border: 1px solid lightgray;
+  border-collapse: collapse;  
+  text-align: center;
+  padding: 5px;
+}
+tbody tr{
+ border-color: lightgray;
+  border-radius: 20px;
+  
+}
+table button{
+  background-color: red;
+  cursor:pointer;
+  color:white;
+  border:none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+table button:hover{
+  background-color: darkred;
+}
+.sortContactsPop-btn,.sortContactsName,.addContact-btn,.sortContactsName-btn{
+  cursor:pointer;
+  color:white;
+  border:none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.addContact-btn{
+background-color: green;
+
+}
+.addContact-btn:hover{
+  background-color: darkgreen;
+ 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.sortContactsPop-btn{
+  background-color: blue;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sortContactsPop-btn:hover{
+  background-color: darkblue;
+}
+.sortContactsName-btn{
+  background-color: orange;
+}
+.sortContactsName-btn:hover{
+  background-color: rgb(155, 102, 3);
 }

@@ -28,9 +28,11 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handlerAddContact}>Add Random Contact</button>
-      <button onClick={handlerSortPopularity}>Sort by Popularity</button>
-      <button onClick={handlerSortName}>Sort by Name</button>
+    <div class="buttons">
+      <button class="addContact-btn" onClick={handlerAddContact}>Add Random Contact</button>
+      <button class="sortContactsPop-btn" onClick={handlerSortPopularity}>Sort by Popularity</button>
+      <button class="sortContactsName-btn" onClick={handlerSortName}>Sort by Name</button>
+      </div>
       <table>
         <thead>
           <tr>
