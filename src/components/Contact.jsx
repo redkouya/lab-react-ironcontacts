@@ -4,7 +4,7 @@ function Contact(props) {
 
   return (
    
-      <tr>
+      <tr key={props.contact.id}>
         <td>
           <img
             width="75px"

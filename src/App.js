@@ -1,20 +1,29 @@
 import "./App.css";
 import Contact from "./components/Contact";
-import contacts from "./contacts.json";
+import allContacts from "./contacts.json";
+import { useState } from "react";
 function App() {
-  const sliceArray = contacts.slice(0, 5);
+  const sliceArray = allContacts.slice(0, 5);
+  const [contacts, setContact] = useState(sliceArray);
+
+  const handlerAddContact = () => {
+    const randomNumber = Math.floor(Math.random() * allContacts.length);
+    setContact([...contacts,allContacts[randomNumber]]);
+  };
+
   return (
     <div className="App">
+      <button onClick={handlerAddContact}>Add Random Contact</button>
       {
         <table>
-          <tr>
+          <tr >
             <th>Picture</th>
             <th>Name</th>
             <th>Popularity</th>
             <th>Won an Oscar</th>
             <th>Won an Emmy</th>
           </tr>
-          {sliceArray.map((eachContact) => {
+          {contacts.map((eachContact) => {
             return <Contact contact={eachContact} />;
           })}
         </table>
