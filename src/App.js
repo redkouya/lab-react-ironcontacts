@@ -10,15 +10,19 @@ function App() {
     const randomNumber = Math.floor(Math.random() * allContacts.length);
     setContact([...contacts,allContacts[randomNumber]]);
   };
-
+ 
   const handlerSortPopularity=()=>{
     setContact([...contacts].sort((a,b) =>a.popularity-b.popularity))
+  }
+  const handlerSortName=()=>{
+    setContact([...contacts].sort((a,b) =>a.name.localeCompare(b.name)))
   }
 
   return (
     <div className="App">
       <button onClick={handlerAddContact}>Add Random Contact</button>
       <button onClick={handlerSortPopularity}>Sort by Popularity</button>
+      <button onClick={handlerSortName}>Sort by Name</button>
       {
         <table>
           <tr >
