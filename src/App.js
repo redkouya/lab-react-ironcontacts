@@ -25,16 +25,21 @@ function App() {
       <button onClick={handlerSortName}>Sort by Name</button>
       {
         <table>
+        <thead>
           <tr >
             <th>Picture</th>
             <th>Name</th>
             <th>Popularity</th>
             <th>Won an Oscar</th>
             <th>Won an Emmy</th>
+            <th>Actions</th>
           </tr>
-          {contacts.map((eachContact) => {
-            return <Contact contact={eachContact} />;
+          </thead>
+          <tbody>
+          {contacts.map((eachContact,index) => {
+            return <Contact contact={eachContact} index={index} allContacts={contacts}  setContact={setContact}/ >;
           })}
+          </tbody>
         </table>
       }
     </div>
