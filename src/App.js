@@ -11,9 +11,14 @@ function App() {
     setContact([...contacts,allContacts[randomNumber]]);
   };
 
+  const handlerSortPopularity=()=>{
+    setContact([...contacts].sort((a,b) =>a.popularity-b.popularity))
+  }
+
   return (
     <div className="App">
       <button onClick={handlerAddContact}>Add Random Contact</button>
+      <button onClick={handlerSortPopularity}>Sort by Popularity</button>
       {
         <table>
           <tr >
