@@ -6,8 +6,10 @@ function Contact(props) {
     props.setContact(clonedArr);
   };
 
+  console.log(props.contact.id)
   return (
-    <tr key={props.contact.id}>
+   
+    <tr key={props.contact.id} >
       <td>
         <img
           width="75px"
@@ -29,6 +31,7 @@ function Contact(props) {
         </button>
       </td>
     </tr>
+    
   );
 }
 
