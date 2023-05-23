@@ -3,14 +3,7 @@ function Contact(props) {
 
 
   return (
-    <table>
-      <tr>
-        <th>Picture</th>
-        <th>Name</th>
-        <th>Popularity</th>
-        <th>Won an Oscar</th>
-        <th>Won an Emmy</th>
-      </tr>
+   
       <tr>
         <td>
           <img
@@ -24,7 +17,7 @@ function Contact(props) {
         <td>{props.contact.wonOscar &&"🏆"}</td>
         <td>{props.contact.wonEmmy &&"🏆"}</td>
       </tr>
-    </table>
+  
   );
 }
 
